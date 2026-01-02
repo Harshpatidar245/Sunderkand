@@ -70,7 +70,7 @@ export function DohaCard({ data, index }: DohaCardProps) {
       </div>
 
       {/* Chaupais Section - Collapsible */}
-      {data.chaupais.length > 0 && (
+      {data.chaupais && data.chaupais.length > 0 && (
         <div className="border-t-2 border-[#D4AF37]/30">
           {/* Chaupais Header */}
           <div 
