@@ -5,7 +5,7 @@ export { Header, Footer, QuickNavigation } from './layout';
 export { ChaupaiItem, DohaCard, DohaList } from './sunderkand';
 
 // Section Components
-export { IntroSection, introCardsData } from './sections';
+export { IntroSection, introCardsData, HanumanChalisa } from './sections';
 
 // UI Components
 export { Accordion, Badge, Divider, ArthBlock } from './ui';

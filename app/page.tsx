@@ -5,7 +5,8 @@ import {
   Footer, 
   QuickNavigation, 
   IntroSection, 
-  DohaList 
+  DohaList,
+  HanumanChalisa 
 } from "./components";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <QuickNavigation data={data} />
       <IntroSection />
       <DohaList data={data} />
+      <HanumanChalisa />
       <Footer />
     </div>
   );
