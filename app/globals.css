@@ -1,26 +1,135 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFF8F0;
+  --foreground: #2D1810;
+  --primary: #C41E3A;
+  --primary-light: #E85A4F;
+  --secondary: #D4AF37;
+  --accent: #FF6B35;
+  --saffron: #FF9933;
+  --maroon: #800020;
+  --cream: #FFFDD0;
+  --gold: #FFD700;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-poppins);
+  --font-devanagari: var(--font-devanagari);
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFE4C4 50%, #FFF8F0 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFE4C4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #C41E3A, #800020);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #E85A4F, #C41E3A);
+}
+
+/* Decorative border pattern */
+.decorative-border {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #D4AF37 10%, 
+    #FFD700 30%, 
+    #D4AF37 50%, 
+    #FFD700 70%, 
+    #D4AF37 90%, 
+    transparent 100%
+  );
+  height: 3px;
+}
+
+/* Om symbol animation */
+@keyframes glow {
+  0%, 100% { 
+    text-shadow: 0 0 10px #FF9933, 0 0 20px #FF9933, 0 0 30px #FF9933;
+  }
+  50% { 
+    text-shadow: 0 0 20px #FFD700, 0 0 40px #FFD700, 0 0 60px #FFD700;
+  }
+}
+
+.om-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Card hover effect */
+.doha-card {
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFF8F0 100%);
+}
+
+.doha-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(128, 0, 32, 0.15);
+}
+
+/* Chaupai styling */
+.chaupai-text {
+  font-family: var(--font-devanagari), serif;
+  line-height: 2;
+}
+
+/* Hindi text styling */
+.hindi-text {
+  font-family: var(--font-devanagari), serif;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #C41E3A 0%, #800020 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mandala pattern background */
+.mandala-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Lotus decoration */
+.lotus-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.lotus-divider::before,
+.lotus-divider::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
 }
