@@ -50,30 +50,30 @@ export function HanumanChalisa() {
   ];
 
   return (
-    <section className="max-w-4xl mx-auto px-4 py-8 mb-8">
+    <section className="max-w-4xl mx-auto px-2 sm:px-4 py-4 md:py-8 mb-4 md:mb-8">
       <article className="doha-card rounded-2xl shadow-lg overflow-hidden border border-[#D4AF37]/30">
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#800020] to-[#C41E3A] text-white px-6 py-4">
+        <div className="bg-gradient-to-r from-[#800020] to-[#C41E3A] text-white px-4 md:px-6 py-3 md:py-4">
           <div className="flex items-center justify-center">
-            <span className="hindi-text text-xl md:text-2xl font-bold">
+            <span className="hindi-text text-base sm:text-xl lg:text-2xl font-bold">
               ॥ श्री हनुमान चालीसा ॥
             </span>
           </div>
         </div>
 
         {/* Content */}
-        <div className="p-6 md:p-8 bg-gradient-to-br from-[#FFFDD0] to-[#FFF8F0]">
+        <div className="p-4 sm:p-6 md:p-8 bg-gradient-to-br from-[#FFFDD0] to-[#FFF8F0]">
           {/* Opening Doha */}
-          <div className="mb-8">
-            <h3 className="hindi-text text-lg font-semibold text-[#800020] mb-4 flex justify-center items-center gap-2">
-              <span className="bg-[#FFD700] text-[#800020] px-3 py-1 rounded-full text-sm font-bold">दोहा</span>
+          <div className="mb-6 md:mb-8">
+            <h3 className="hindi-text text-base md:text-lg font-semibold text-[#800020] mb-3 md:mb-4 flex justify-center items-center gap-2">
+              <span className="bg-[#FFD700] text-[#800020] px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">दोहा</span>
             </h3>
-            <div className="text-center space-y-4">
-              <p className="hindi-text text-lg md:text-xl leading-loose text-[#800020] font-medium">
+            <div className="text-center space-y-3 md:space-y-4">
+              <p className="hindi-text text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed md:leading-loose text-[#800020] font-medium">
                 श्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि ।<br/>
                 बरनउँ रघुबर बिमल जसु जो दायकु फल चारि ॥
               </p>
-              <p className="hindi-text text-lg md:text-xl leading-loose text-[#800020] font-medium">
+              <p className="hindi-text text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed md:leading-loose text-[#800020] font-medium">
                 बुद्धिहीन तनु जानिके, सुमिरौं पवन कुमार ।<br/>
                 बल बुधि विद्या देहु मोहि, हरहु कलेश विकार ॥
               </p>
@@ -84,23 +84,23 @@ export function HanumanChalisa() {
           <div className="border-t-2 border-[#D4AF37]/30 -mx-6 md:-mx-8">
             {/* Chaupais Header */}
             <div 
-              className="bg-[#FFF8F0] px-6 py-3 border-b border-[#D4AF37]/20 cursor-pointer hover:bg-[#FFF0E0] transition-colors"
+              className="bg-[#FFF8F0] px-4 md:px-6 py-2 md:py-3 border-b border-[#D4AF37]/20 cursor-pointer hover:bg-[#FFF0E0] transition-colors"
               onClick={() => setIsChaupaissOpen(!isChaupaissOpen)}
               role="button"
               tabIndex={0}
               aria-expanded={isChaupaissOpen}
               onKeyDown={(e) => e.key === 'Enter' && setIsChaupaissOpen(!isChaupaissOpen)}
             >
-              <h3 className="hindi-text text-lg font-semibold text-[#800020] flex items-center justify-between">
+              <h3 className="hindi-text text-base md:text-lg font-semibold text-[#800020] flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Star className="w-5 h-5 text-[#D4AF37]" />
+                  <Star className="w-4 h-4 md:w-5 md:h-5 text-[#D4AF37]" />
                   <span>चौपाई</span>
-                  <span className="bg-[#FF9933] text-white text-xs px-2 py-0.5 rounded-full ml-2">
+                  <span className="bg-[#FF9933] text-white text-[10px] md:text-xs px-1.5 md:px-2 py-0.5 rounded-full ml-1 md:ml-2">
                     40
                   </span>
                 </div>
                 <span className={`text-[#C41E3A] transition-transform duration-300 ${isChaupaissOpen ? 'rotate-180' : ''}`}>
-                  <ChevronDown className="w-5 h-5" />
+                  <ChevronDown className="w-4 h-4 md:w-5 md:h-5" />
                 </span>
               </h3>
             </div>
@@ -111,14 +111,14 @@ export function HanumanChalisa() {
                 isChaupaissOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="p-6 md:p-8 bg-[#FFFAF0] flex flex-col items-center gap-3">
+              <div className="p-3 sm:p-4 md:p-6 lg:p-8 bg-[#FFFAF0] flex flex-col items-center gap-2 md:gap-3">
                 {chaupais.map((chaupai, index) => (
                   <div 
                     key={index}
-                    className="flex flex-col rounded-lg  transition-colors"
+                    className="flex flex-col rounded-lg transition-colors w-full"
                   >
-                    <div className="flex items-start gap-3">
-                      <p className="hindi-text text-base md:text-lg text-[#2D1810] leading-relaxed">
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <p className="hindi-text text-xs sm:text-sm md:text-base lg:text-lg text-[#2D1810] leading-relaxed text-center w-full">
                         {chaupai}
                       </p>
                     </div>
@@ -129,12 +129,12 @@ export function HanumanChalisa() {
           </div>
 
           {/* Closing Doha */}
-          <div className="flex flex-col justify-center items-center mt-8 mb-8">
-            <h3 className="hindi-text text-lg font-semibold text-[#800020] mb-4 flex justify-center items-center gap-2">
-              <span className=" bg-[#FFD700] text-[#800020] px-3 py-1 rounded-full text-sm font-bold">दोहा</span>
+          <div className="flex flex-col justify-center items-center mt-6 md:mt-8 mb-6 md:mb-8">
+            <h3 className="hindi-text text-base md:text-lg font-semibold text-[#800020] mb-3 md:mb-4 flex justify-center items-center gap-2">
+              <span className="bg-[#FFD700] text-[#800020] px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">दोहा</span>
             </h3>
             <div className="text-center">
-              <p className="hindi-text text-lg md:text-xl leading-loose text-[#800020] font-medium">
+              <p className="hindi-text text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed md:leading-loose text-[#800020] font-medium">
                 पवन तनय संकट हरन, मंगल मूरति रूप ।<br/>
                 राम लखन सीता सहित, हृदय बसहु सुर भूप ॥
               </p>
@@ -142,11 +142,11 @@ export function HanumanChalisa() {
           </div>
 
           {/* Jai Calls */}
-          <div className="text-center space-y-2 bg-gradient-to-r from-[#800020] to-[#C41E3A] text-white py-6 px-4 rounded-xl">
-            <p className="hindi-text text-lg md:text-xl font-semibold">॥ सियावर रामचन्द्र की जय ॥</p>
-            <p className="hindi-text text-lg md:text-xl font-semibold">॥ पवनसुत हनुमान की जय ॥</p>
-            <p className="hindi-text text-lg md:text-xl font-semibold">॥ उमापति महादेव की जय ॥</p>
-            <p className="hindi-text text-lg md:text-xl font-semibold text-[#FFD700]">॥ बोलो रे भई सब सन्तन की जय ॥</p>
+          <div className="text-center space-y-1 md:space-y-2 bg-gradient-to-r from-[#800020] to-[#C41E3A] text-white py-4 md:py-6 px-3 md:px-4 rounded-xl">
+            <p className="hindi-text text-sm sm:text-base md:text-lg lg:text-xl font-semibold">॥ सियावर रामचन्द्र की जय ॥</p>
+            <p className="hindi-text text-sm sm:text-base md:text-lg lg:text-xl font-semibold">॥ पवनसुत हनुमान की जय ॥</p>
+            <p className="hindi-text text-sm sm:text-base md:text-lg lg:text-xl font-semibold">॥ उमापति महादेव की जय ॥</p>
+            <p className="hindi-text text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-[#FFD700]">॥ बोलो रे भई सब सन्तन की जय ॥</p>
           </div>
         </div>
       </article>
