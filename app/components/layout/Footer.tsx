@@ -13,11 +13,6 @@ export function Footer() {
           ॥ जय श्री राम ॥
         </p>
         
-        <p className="hindi-text text-lg opacity-80 mb-6">
-          बुद्धिहीन तनु जानिके, सुमिरौं पवन कुमार।<br/>
-          बल बुद्धि विद्या देहु मोहिं, हरहु कलेश विकार॥
-        </p>
-        
         <div className="flex justify-center gap-4 mb-6">
           <span className="text-[#FFD700] text-2xl">🙏</span>
           <span className="text-[#FFD700] text-2xl">🙏</span>
